@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mod5_LabC_MultiPageNavigation.Pages.CatFactsPage"
+             Title="Cat Facts">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="grumpycat.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description=" grumpy cat logo" />
+            <Label
+                x:Name="FactLabel"
+                Text="Press the button to get a cat fact!"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Get Random Cat Fact"
+                Clicked="OnGetCatFactClicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Mod5_LabC_MultiPageNavigation.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Mod5_LabC_MultiPageNavigation.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Mod5_LabC_MultiPageNavigation">
+
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="BMI Calculator" Icon="bmi.png">
+            <ShellContent ContentTemplate="{DataTemplate local:BmiMainPage}"/>
+        </Tab>
+        <Tab Title="Can I Drink Alcohol" Icon="drink.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CanIDrinkPage}"/>
+        </Tab>
+        <Tab Title="Cat Facts" Icon="meow.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CatFactsPage}"/>
+        </Tab>
+    </TabBar>
+</Shell>

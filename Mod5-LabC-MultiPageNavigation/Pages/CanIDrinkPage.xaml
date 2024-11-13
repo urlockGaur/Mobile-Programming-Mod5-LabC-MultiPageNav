@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Mod5_LabC_MultiPageNavigation.Pages.CanIDrinkPage"
+             Title="When Can I Legally Drink Alcohol">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <!-- Input Row: Age Entry and Birthday Picker Side by Side -->
+            <Label Text="Enter your age or select your birthdate:" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="10">
+                <!-- Age Entry with TextChanged event to disable DatePicker -->
+                <Entry x:Name="AgeEntry" Placeholder="Enter age" Keyboard="Numeric" WidthRequest="100" TextChanged="OnAgeEntryTextChanged" />
+
+                <!-- Birthday Picker with Reset Button -->
+                <DatePicker x:Name="BirthdayPicker" MaximumDate="{x:Static sys:DateTime.Now}" DateSelected="OnDatePickerSelected" />
+                <Button Text="Reset Date" Clicked="OnResetDateClicked" />
+            </HorizontalStackLayout>
+
+            <!-- Button to Calculate -->
+            <Button x:Name="CalculateButton" Text="Calculate" Clicked="OnCalculateClicked" />
+
+            <!-- Country Selection for Drinking Age -->
+            <Label Text="Select your country:" />
+            <Picker x:Name="CountryPicker">
+                <Picker.Items>
+                    <x:String>USA</x:String>
+                    <x:String>Vietnam</x:String>
+                    <x:String>Germany</x:String>
+                    <x:String>Brazil</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Result Display -->
+            <Label x:Name="ResultLabel" Text="Result will appear here" FontAttributes="Bold" FontSize="Medium" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
