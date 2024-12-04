@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mod5_LabC_MultiPageNavigation.Pages.BmiMainPage"
              Title="Calculate BMI">
-
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
             <Image
                 Source="bmicalc.png"
                 HeightRequest="185"
@@ -19,27 +15,27 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Editor 
+            <Editor
                 x:Name="Inp_weight"
                 Placeholder="Please enter weight in pounds"
-                PlaceholderColor="Green" />
-            <Editor 
+                Style="{StaticResource EntryStyle}" />
+
+            <Editor
                 x:Name="Inp_height"
                 Placeholder="Enter height in inches"
-                PlaceholderColor="Green" />
+                Style="{StaticResource EntryStyle}" />
 
             <Button
                 x:Name="CalculateBMIBtn"
-                Text="Calculate BMI" 
-                SemanticProperties.Hint="Calculates your BMI based on weight and height"
+                Text="Calculate BMI"
+                Style="{StaticResource PrimaryButtonStyle}"
                 Clicked="OnCalculateBMIClicked"
-                HorizontalOptions="Fill" />
+                SemanticProperties.Hint="Calculates your BMI based on weight and height" />
 
             <Label
                 x:Name="BmiResult"
                 Text="Your BMI will be displayed here."
                 Style="{StaticResource SubHeadline}" />
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

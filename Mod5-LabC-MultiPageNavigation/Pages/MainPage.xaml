@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mod5_LabC_MultiPageNavigation.Pages.MainPage"
              Title="Appception">
@@ -12,7 +11,7 @@
                 Source="appception.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="alien comes in peace" />
+                SemanticProperties.Description="alien comes in peace image" />
 
             <Label
                 Text="Welcome"
@@ -23,15 +22,13 @@
                 Text="Appception begins..."
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.Description="Welcome to the appception app. This app contains multiple apps inside of it" />
 
             <Label
                 Text="Use the tabs to navigate to apps within an app"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />   
-
+                SemanticProperties.Description="Navigation tabs to navigate between apps." />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

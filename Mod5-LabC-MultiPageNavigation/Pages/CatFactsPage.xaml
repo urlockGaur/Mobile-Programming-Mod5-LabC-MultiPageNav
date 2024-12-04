@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mod5_LabC_MultiPageNavigation.Pages.CatFactsPage"
@@ -11,17 +10,19 @@
                 Source="grumpycat.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description=" grumpy cat logo" />
+                SemanticProperties.Description="A grumpy cat image logo" />
+
             <Label
                 x:Name="FactLabel"
                 Text="Press the button to get a cat fact!"
-                HorizontalOptions="Center" />
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.Hint="Displays a prompt to get a random cat fact" />
 
             <Button
                 Text="Get Random Cat Fact"
                 Clicked="OnGetCatFactClicked"
-                HorizontalOptions="Center" />
+                Style="{StaticResource PrimaryButtonStyle}"
+                SemanticProperties.Hint="Click to retrieve a random cat fact" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
